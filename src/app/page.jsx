@@ -1,4 +1,6 @@
+import Link from 'next/link';
 import { supabase } from '../lib/supabaseClient';
+
 
 
 export default async function Home() {
@@ -11,6 +13,7 @@ console.log(data);
           <li key={country.id}>{country.id}&emsp;{country.name}</li>
         ))}
       </ul>
+      <Link href={'/create'}>Create Page</Link>
     </div>
   )
 }
